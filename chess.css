@@ -1,6 +1,16 @@
-@font-face {
-    font-family: "Lorena";
-    src: url("fonts/Lorena.ttf") format("truetype");
+.log {
+    border-radius: 20px;
+    display:flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    width: 50%;
+}
+h2 {
+    margin-left: auto;
+    margin-right: auto;
+    color: #fff1e1;
+    font-family: "Arial Black";
+
 }
 h1 {
     color: #fff1e1;
@@ -12,17 +22,22 @@ body {
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: wrap;
-    background: linear-gradient(45deg,  #d2601a , gray);
+    background-image: linear-gradient(75deg, gray, #d2601a);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
 }
-header {
+
+.container{
     width: 100%;
-    height: 25%;
-    background-color: #b2592d;
-    margin-bottom: 1%;
+    display: flex;
+    flex-flow: row-reverse;
+    flex-wrap: nowrap;
 }
 
 main {
-    margin: auto;
+
     width: 50%;
     height: 100%;
     color: #fff1e1;
@@ -31,8 +46,9 @@ main {
 }
 aside {
     display: flex;
-    margin-right: 100px;
-    justify-content: end;
+    width: 50%;
+    flex-direction: column;
+    font-family: "Arial Black";
 
 }
 
@@ -40,19 +56,23 @@ aside {
     display: grid;
     grid-template-rows: 1fr repeat(8, 3fr) 1fr;
     grid-template-columns: 1fr repeat(8, 3fr) 1fr;
+    min-width: 400px;
+    min-height: 400px;
+    height: 50vw;
+    width: 50vw
 }
 
-.row1:nth-child(odd) {
+.odd-row-cell:nth-child(odd) {
     background-color: #d2601a;
 }
-.row1:nth-child(even) {
+.odd-row-cell:nth-child(even) {
     background-color: #fff1e1;
 }
 
-.row:nth-child(even) {
+.even-row-cell:nth-child(even) {
     background-color: #d2601a;
 }
-.row:nth-child(odd) {
+.even-row-cell:nth-child(odd) {
     background-color: #fff1e1;
 }
 .note {
@@ -63,20 +83,90 @@ aside {
 }
 
 button {
-    width: 150px;
+    width: 30%;
     height: 50px;
-    border-radius: 5px;
-    background: linear-gradient(75deg, #d2601a 5%, #fff1e1 350%);
+    background: #1d3c45;
     border: none;
     color: #fff1e1;
     font-family: "Arial Black";
+    margin-left: auto;
+    margin-right: auto;
 }
 button:hover {
-    box-shadow: 0 0 20px #d2601a;
+    border: 1px #fff1e1 solid;
+    background: #1d3c45;
 }
 .timer {
     margin: auto;
     font-size: xxx-large;
     font-family: "Book Antiqua";
     color: #1d3c45;
+}
+
+.figure{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.white-pawn-figure{
+    background-image: url("resources/white-pawn1.png") !important;
+}
+.black-pawn-figure {
+    background-image: url("resources/black-pawn.png") !important;
+}
+.white-rook-figure {
+    background-image: url("resources/white-rook.png") !important;
+}
+.black-rook-figure {
+    background-image: url("resources/black-rook.png") !important;
+}
+.white-knight-figure {
+    background-image: url("resources/white-knight.png") !important;
+}
+.black-knight-figure {
+    background-image: url("resources/black-knight.png") !important;
+}
+.white-bishop-figure {
+    background-image: url("resources/white-bishop.png") !important;
+}
+.black-bishop-figure {
+    background-image: url("resources/black-bishop.png") !important;
+}
+.white-queen-figure {
+    background-image: url("resources/white-queen.png") !important;
+}
+.black-queen-figure {
+    background-image: url("resources/black-queen.png") !important;
+}
+.white-king-figure {
+    background-image: url("resources/white-king.png") !important;
+}
+.black-king-figure {
+    background-image: url("resources/black-king.png") !important;
+}
+
+.cell-highlighted{
+    background-color: red !important;
+}
+
+.figure-cell-highlighted{
+    background-color: green !important;
+}
+.right-markup {
+    transform: rotate(180deg);
+    margin: 0px;
+}
+
+li {
+    list-style: none;
+    color: #fff1e1;
+    font-family: "Arial Black";
+}
+ul {
+    padding-left: 0px;
+    font-size: small;
+    margin: 5px;
+
 }
